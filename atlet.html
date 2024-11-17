@@ -1,0 +1,1393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Your description">
+    <meta name="author" content="Your name">
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
+	<meta property="og:site_name" content="" /> <!-- website name -->
+	<meta property="og:site" content="" /> <!-- website link -->
+	<meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
+	<meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+	<meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+	<meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
+
+    <!-- Webpage Title -->
+    <title>PPLPD - Atlet</title>
+    
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/fontawesome-all.min.css" rel="stylesheet">
+    <link href="css/swiper.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-dark" aria-label="Main navigation">
+        <div class="container">
+
+            <a class="navbar-brand logo-text" href="index.html">
+                PPLPD<br>
+                <span style="font-size: 0.7em;">Samarinda</span>
+            </a>
+
+            <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav ms-auto navbar-nav-scroll">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="tentangkami.html" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Tentang Kami</a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdown01">
+                            <li><a class="dropdown-item" href="tentangkami.html#latar-section">Latar Belakang</a></li>
+                            <li><div class="dropdown-divider"></div></li>
+                            <li><a class="dropdown-item" href="tentangkami.html#visi-section">Visi & Misi</a></li>
+                            <li><div class="dropdown-divider"></div></li>
+                            <li><a class="dropdown-item" href="tentangkami.html#hukum-section">Dasar Hukum</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cabor.html">Cabor Binaan</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-bs-toggle="dropdown" aria-expanded="false">Pelatih & Atlet</a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdown02">
+                            <li><a class="dropdown-item" href="pelatih.html">Pelatih</a></li>
+                            <li><div class="dropdown-divider"></div></li>
+                            <li><a class="dropdown-item" href="atlet.html">Atlet</a></li>
+                            <li><div class="dropdown-divider"></div></li>
+                            <li><a class="dropdown-item" href="seleksi.html">Seleksi Pelatih & Atlet</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="venue.html">Venue</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="prestasi.html">Prestasi</a>
+                    </li>
+                </ul>
+
+                <!-- logo sosial media -->
+                <span class="nav-item social-icons">
+                    <span class="fa-stack">
+                        <a href="#" target="_blank">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fab fa-facebook-f fa-stack-1x"></i>
+                        </a>
+                    </span>
+                    <span class="fa-stack">
+                        <a href="https://www.instagram.com/pplpd.samarinda" target="_blank">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fab fa-instagram fa-stack-1x"></i>
+                        </a>
+                    </span>
+                </span>
+            </div>
+        </div>
+    </nav>
+    <!-- end of navigation -->
+
+    <!-- Header -->
+    <header class="ex-header mb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-10 offset-xl-1">
+                    <h1>Atlet</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- end of header -->
+
+    <div class="container mb-4">
+      <div class="d-flex align-items-center justify-content-center">
+        <label for="categoryFilter" class="form-label me-2">Pilih Cabang Olahraga:</label>
+        <select id="categoryFilter" class="form-select w-auto" onchange="filterAthletes()">
+          <option value="all">Semua</option>
+          <option value="anggar">Anggar</option>
+          <option value="angkat">Angkat Besi</option>
+          <option value="atletik">Atletik</option>
+          <option value="gulat">Gulat</option>
+          <option value="karate">Karate</option>
+          <option value="silat">Pencak Silat</option>
+          <option value="renang">Renang</option>
+          <option value="taekwondo">Taekwondo</option>
+          <option value="lapangan">Tenis Lapangan</option>
+          <option value="meja">Tenis Meja</option>
+        </select>
+      </div>
+    </div>
+    
+    <section class="container site-section py-5" id="name-section">
+      <div class="row">
+        <!-- karate -->
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="karate">
+          <div class="team-member">
+            <figure>
+                <a href="karate_hardi.html"><img src="images/foto.jpeg" alt="img" class="img-fluid"></a>
+            </figure>
+            <div class="p-3 card-title1">
+                  <a href="karate_hardi.html">
+                      <h3>Hardi Putra Haykal</h3>
+                      <span class="position">Karate</span>
+                  </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="karate">
+          <div class="team-member">
+              <figure>
+                  <a href="karate_rafi.html"><img src="images/atlet/karate/rafi.jpg" alt="img" class="img-fluid"></a>
+              </figure>
+            <div class="p-3 card-title1">
+                  <a href="karate_rafi.html">
+                      <h3>Muhammda Rafi Pangestu</h3>
+                      <span class="position">Karate</span>
+                  </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="karate">
+          <div class="team-member">
+              <figure>
+                  <a href="karate_hafizh.html"><img src="images/atlet/karate/hafizh.jpg" alt="img" class="img-fluid"></a>
+              </figure>
+            <div class="p-3 card-title1">
+                  <a href="karate_hafizh.html">
+                      <h3>Hafizh Rizki Ramadhan</h3>
+                      <span class="position">Karate</span>
+                  </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="karate">
+          <div class="team-member">
+              <figure>
+                  <a href="karate_aisha.html"><img src="images/foto.jpeg" alt="img" class="img-fluid"></a>
+              </figure>
+            <div class="p-3 card-title1">
+                  <a href="karate_aisha.html">
+                      <h3>Aisha Mahya</h3>
+                      <span class="position">Karate</span>
+                  </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="karate">
+            <div class="team-member">
+                <figure>
+                    <a href="karate_dian.html"><img src="images/atlet/karate/dian.jpeg" alt="img" class="img-fluid"></a>
+                </figure>
+              <div class="p-3 card-title1">
+                    <a href="karate_dian.html">
+                        <h3>Dian Citra Lestari</h3>
+                        <span class="position">Karate</span>
+                    </a>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="karate">
+            <div class="team-member">
+                <figure>
+                    <a href="karate_wira.html"><img src="images/foto.jpeg" alt="img" class="img-fluid"></a>
+                </figure>
+              <div class="p-3 card-title1">
+                    <a href="karate_wira.html">
+                        <h3>Wira Hakim Hermanto</h3>
+                        <span class="position">Karate</span>
+                    </a>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="karate">
+            <div class="team-member">
+                <figure>
+                    <a href="karate_indira.html"><img src="images/atlet/karate/indira.jpeg" alt="img" class="img-fluid"></a>
+                </figure>
+              <div class="p-3 card-title1">
+                    <a href="karate_indira.html">
+                        <h3>Indira Aulia Ramadhani</h3>
+                        <span class="position">Karate</span>
+                    </a>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="karate">
+            <div class="team-member">
+                <figure>
+                    <a href="karate_theresia.html"><img src="images/atlet/karate/theresia.jpg" alt="img" class="img-fluid"></a>
+                </figure>
+              <div class="p-3 card-title1">
+                    <a href="karate_theresia.html">
+                        <h3>Theresia Romasta Lamtama</h3>
+                        <span class="position">Karate</span>
+                    </a>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="karate">
+            <div class="team-member">
+                <figure>
+                    <a href="karate_haikal.html"><img src="images/atlet/karate/haikal.jpg" alt="img" class="img-fluid"></a>
+                </figure>
+              <div class="p-3 card-title1">
+                    <a href="karate_haikal.html">
+                        <h3>Haikal Sindu Wardana</h3>
+                        <span class="position">Karate</span>
+                    </a>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="karate">
+            <div class="team-member">
+                <figure>
+                    <a href="karate_ravi.html"><img src="images/atlet/karate/ravi.jpg" alt="img" class="img-fluid"></a>
+                </figure>
+              <div class="p-3 card-title1">
+                    <a href="karate_ravi.html">
+                        <h3>Ravi Junian Ash-Shiddieqy</h3>
+                        <span class="position">Karate</span>
+                    </a>
+              </div>
+            </div>
+        </div>
+
+        <!-- gulat -->
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="gulat">
+            <div class="team-member">
+                <figure>
+                    <a href="gulat_syekh.html"><img src="images/foto.jpeg" alt="img" class="img-fluid"></a>
+                </figure>
+              <div class="p-3 card-title1">
+                    <a href="gulat_syekh.html">
+                        <h3>Syekh Fadillah</h3>
+                        <span class="position">Gulat</span>
+                    </a>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="gulat">
+          <div class="team-member">
+              <figure>
+                  <a href="gulat_suci.html"><img src="images/atlet/gulat/suci.jpg" alt="img" class="img-fluid"></a>
+              </figure>
+            <div class="p-3 card-title1">
+                  <a href="gulat_suci.html">
+                      <h3>Suci Basri</h3>
+                      <span class="position">Gulat</span>
+                  </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="gulat">
+          <div class="team-member">
+              <figure>
+                  <a href="gulat_genta.html"><img src="images/atlet/gulat/genta.jpg" alt="img" class="img-fluid"></a>
+              </figure>
+            <div class="p-3 card-title1">
+                  <a href="gulat_genta.html">
+                      <h3>Genta Putra Rajasa</h3>
+                      <span class="position">Gulat</span>
+                  </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="gulat">
+            <div class="team-member">
+                <figure>
+                    <a href="gulat_rifqiy.html"><img src="images/atlet/gulat/rifqiy.jpeg" alt="img" class="img-fluid"></a>
+                </figure>
+              <div class="p-3 card-title1">
+                    <a href="gulat_rifqiy.html">
+                        <h3>M. Rifqiy Mudzakkir</h3>
+                        <span class="position">Gulat</span>
+                    </a>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="gulat">
+            <div class="team-member">
+                <figure>
+                    <a href="gulat_rasydan.html"><img src="images/atlet/gulat/rasydan.jpeg" alt="img" class="img-fluid"></a>
+                </figure>
+              <div class="p-3 card-title1">
+                    <a href="gulat_rasydan.html">
+                        <h3>Muhammad Rasydan</h3>
+                        <span class="position">Gulat</span>
+                    </a>
+              </div>
+            </div>
+        </div>
+  
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="gulat">
+            <div class="team-member">
+                <figure>
+                    <a href="gulat_naila.html"><img src="images/atlet/gulat/naila.jpeg" alt="img" class="img-fluid"></a>
+                </figure>
+              <div class="p-3 card-title1">
+                    <a href="gulat_naila.html">
+                        <h3>Naila Rifa Zhafirah</h3>
+                        <span class="position">Gulat</span>
+                    </a>
+              </div>
+            </div>
+        </div>
+  
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="gulat">
+            <div class="team-member">
+                  <figure>
+                      <a href="gulat_nilam.html"><img src="images/atlet/gulat/nilam.png" alt="img" class="img-fluid"></a>
+                  </figure>
+                <div class="p-3 card-title1">
+                      <a href="gulat_nilam.html">
+                          <h3>Nilam Tri'ad Sahara</h3>
+                          <span class="position">Gulat</span>
+                      </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="gulat">
+            <div class="team-member">
+                <figure>
+                    <a href="gulat_melvino.html"><img src="images/atlet/gulat/melvino.jpg" alt="img" class="img-fluid"></a>
+                </figure>
+              <div class="p-3 card-title1">
+                    <a href="gulat_melvino.html">
+                        <h3>Melvino Destian</h3>
+                        <span class="position">Gulat</span>
+                    </a>
+              </div>
+            </div>
+        </div>
+  
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="gulat">
+            <div class="team-member">
+                  <figure>
+                      <a href="gulat_kheyzia.html"><img src="images/atlet/gulat/kheyzia.jpg" alt="img" class="img-fluid"></a>
+                  </figure>
+                <div class="p-3 card-title1">
+                      <a href="gulat_kheyzia.html">
+                          <h3>Kheyzia Aura Aprilia</h3>
+                          <span class="position">Gulat</span>
+                      </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- silat -->
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="silat">
+            <div class="team-member">
+                <figure>
+                    <a href="silat_bisri.html"><img src="images/atlet/silat/bisri.jpg" alt="img" class="img-fluid"></a>
+                </figure>
+              <div class="p-3 card-title1">
+                    <a href="silat_bisri.html">
+                        <h3>Muhammad Bisri Mustofa</h3>
+                        <span class="position">Pencak Silat</span>
+                    </a>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="silat">
+          <div class="team-member">
+              <figure>
+                  <a href="silat_fiona.html"><img src="images/atlet/silat/fiona.jpg" alt="img" class="img-fluid"></a>
+              </figure>
+            <div class="p-3 card-title1">
+                  <a href="silat_fiona.html">
+                      <h3>Fiona Junita Safira Latif</h3>
+                      <span class="position">Pencak Silat</span>
+                  </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="silat">
+          <div class="team-member">
+              <figure>
+                  <a href="silat_asma.html"><img src="images/atlet/silat/asma.jpg" alt="img" class="img-fluid"></a>
+              </figure>
+            <div class="p-3 card-title1">
+                  <a href="silat_asma.html">
+                      <h3>Asma Nur Putri Aulia</h3>
+                      <span class="position">Pencak Silat</span>
+                  </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="silat">
+            <div class="team-member">
+                <figure>
+                    <a href="silat_damaris.html"><img src="images/atlet/silat/damaris.jpg" alt="img" class="img-fluid"></a>
+                </figure>
+              <div class="p-3 card-title1">
+                    <a href="silat_damaris.html">
+                        <h3>Damaris Boru Marpaung</h3>
+                        <span class="position">Pencak Silat</span>
+                    </a>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="silat">
+            <div class="team-member">
+                <figure>
+                    <a href="silat_adhianur.html"><img src="images/atlet/silat/adhianur.jpg" alt="img" class="img-fluid"></a>
+                </figure>
+              <div class="p-3 card-title1">
+                    <a href="silat_adhianur.html">
+                        <h3>M. Adhianur Prasetya</h3>
+                        <span class="position">Pencak Silat</span>
+                    </a>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="silat">
+          <div class="team-member">
+              <figure>
+                  <a href="silat_fitri.html"><img src="images/atlet/silat/fitri.jpg" alt="img" class="img-fluid"></a>
+              </figure>
+            <div class="p-3 card-title1">
+                  <a href="silat_fitri.html">
+                      <h3>Fitri Rahmadani</h3>
+                      <span class="position">Pencak Silat</span>
+                  </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="silat">
+          <div class="team-member">
+              <figure>
+                  <a href="silat_norma.html"><img src="images/atlet/silat/norma.jpg" alt="img" class="img-fluid"></a>
+              </figure>
+            <div class="p-3 card-title1">
+                  <a href="silat_norma.html">
+                      <h3>Norma Askia</h3>
+                      <span class="position">Pencak Silat</span>
+                  </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="silat">
+            <div class="team-member">
+                <figure>
+                    <a href="silat_sofiana.html"><img src="images/atlet/silat/sofiana.jpg" alt="img" class="img-fluid"></a>
+                </figure>
+              <div class="p-3 card-title1">
+                    <a href="silat_sofiana.html">
+                        <h3>Sofiana Putri Giantika</h3>
+                        <span class="position">Pencak Silat</span>
+                    </a>
+              </div>
+            </div>
+        </div>
+
+        <!-- taekwondo -->
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="taekwondo">
+            <div class="team-member">
+                <figure>
+                    <a href="taekwondo_valdo.html"><img src="images/atlet/taekwondo/valdo.jpg" alt="img" class="img-fluid"></a>
+                </figure>
+              <div class="p-3 card-title1">
+                    <a href="taekwondo_valdo.html">
+                        <h3>Valdo Caesar Nurzy</h3>
+                        <span class="position">Taekwondo</span>
+                    </a>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="taekwondo">
+          <div class="team-member">
+              <figure>
+                  <a href="taekwondo_anisa.html"><img src="images/atlet/taekwondo/anisa.jpg" alt="img" class="img-fluid"></a>
+              </figure>
+            <div class="p-3 card-title1">
+                  <a href="taekwondo_anisa.html">
+                      <h3>Anisa Nainawa Al Manaf</h3>
+                      <span class="position">Taekwondo</span>
+                  </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="taekwondo">
+          <div class="team-member">
+              <figure>
+                  <a href="taekwondo_alifiya.html"><img src="images/atlet/taekwondo/alifiya.jpg" alt="img" class="img-fluid"></a>
+              </figure>
+            <div class="p-3 card-title1">
+                  <a href="taekwondo_alifiya.html">
+                      <h3>Alifiya Junita Wahyuni</h3>
+                      <span class="position">Taekwondo</span>
+                  </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="taekwondo">
+            <div class="team-member">
+                <figure>
+                    <a href="taekwondo_jihan.html"><img src="images/atlet/taekwondo/jihan.jpg" alt="img" class="img-fluid"></a>
+                </figure>
+              <div class="p-3 card-title1">
+                    <a href="taekwondo_jihan.html">
+                        <h3>Jihan Talita Ulfa</h3>
+                        <span class="position">Taekwondo</span>
+                    </a>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="taekwondo">
+            <div class="team-member">
+                <figure>
+                    <a href="taekwondo_akmal.html"><img src="images/atlet/taekwondo/akmal.jpeg" alt="img" class="img-fluid"></a>
+                </figure>
+              <div class="p-3 card-title1">
+                    <a href="taekwondo_akmal.html">
+                        <h3>Muhammad Akmal Adinata</h3>
+                        <span class="position">Taekwondo</span>
+                    </a>
+              </div>
+            </div>
+        </div>
+  
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="taekwondo">
+            <div class="team-member">
+                <figure>
+                    <a href="taekwondo_akbar.html"><img src="images/atlet/taekwondo/akbar.jpg" alt="img" class="img-fluid"></a>
+                </figure>
+              <div class="p-3 card-title1">
+                    <a href="taekwondo_akbar.html">
+                        <h3>Akbar Sony Bimo Sadewo</h3>
+                        <span class="position">Taekwondo</span>
+                    </a>
+              </div>
+            </div>
+        </div>
+  
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="taekwondo">
+            <div class="team-member">
+                  <figure>
+                      <a href="taekwondo_imaniar.html"><img src="images/atlet/taekwondo/imaniar.jpg" alt="img" class="img-fluid"></a>
+                  </figure>
+                <div class="p-3 card-title1">
+                      <a href="taekwondo_imaniar.html">
+                          <h3>Imaniar Eiline Syavita</h3>
+                          <span class="position">Taekwondo</span>
+                      </a>
+                </div>
+            </div>
+        </div>
+          
+        <!-- angkat besi -->
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="angkat">
+            <div class="team-member">
+                <figure>
+                    <a href="angkatbesi_alif.html"><img src="images/atlet/angkatbesi/alif.jpg" alt="img" class="img-fluid"></a>
+                </figure>
+              <div class="p-3 card-title1">
+                    <a href="angkatbesi_alif.html">
+                        <h3>Alif Nur Ramadhan</h3>
+                        <span class="position">Angkat Besi</span>
+                    </a>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="angkat">
+          <div class="team-member">
+              <figure>
+                  <a href="angkatbesi_almira.html"><img src="images/atlet/angkatbesi/almira.jpeg" alt="img" class="img-fluid"></a>
+              </figure>
+            <div class="p-3 card-title1">
+                  <a href="angkatbesi_almira.html">
+                      <h3>Almira Aulia Azis</h3>
+                      <span class="position">Angkat Besi</span>
+                  </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="angkat">
+          <div class="team-member">
+              <figure>
+                  <a href="angkatbesi_aulia.html"><img src="images/atlet/angkatbesi/aulia.jpg" alt="img" class="img-fluid"></a>
+              </figure>
+            <div class="p-3 card-title1">
+                  <a href="angkatbesi_aulia.html">
+                      <h3>Aulia Putri Nadhifa</h3>
+                      <span class="position">Angkat Besi</span>
+                  </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="angkat">
+            <div class="team-member">
+                <figure>
+                    <a href="angkatbesi_dzaky.html"><img src="images/atlet/angkatbesi/dzaky.jpg" alt="img" class="img-fluid"></a>
+                </figure>
+              <div class="p-3 card-title1">
+                    <a href="angkatbesi_dzaky.html">
+                        <h3>Dzaky Farras Hanafi</h3>
+                        <span class="position">Angkat Besi</span>
+                    </a>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="angkat">
+            <div class="team-member">
+                <figure>
+                    <a href="angkatbesi_heirunnisa.html"><img src="images/atlet/angkatbesi/heirunnisa.jpeg" alt="img" class="img-fluid"></a>
+                </figure>
+              <div class="p-3 card-title1">
+                    <a href="angkatbesi_heirunnisa.html">
+                        <h3>Heirunnisa</h3>
+                        <span class="position">Angkat Besi</span>
+                    </a>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="angkat">
+          <div class="team-member">
+              <figure>
+                  <a href="angkatbesi_jenni.html"><img src="images/atlet/angkatbesi/jenni.jpg" alt="img" class="img-fluid"></a>
+              </figure>
+            <div class="p-3 card-title1">
+                  <a href="angkatbesi_jenni.html">
+                      <h3>Jenni Aprani</h3>
+                      <span class="position">Angkat Besi</span>
+                  </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="angkat">
+          <div class="team-member">
+              <figure>
+                  <a href="angkatbesi_khanaya.html"><img src="images/atlet/angkatbesi/khanaya.jpg" alt="img" class="img-fluid"></a>
+              </figure>
+            <div class="p-3 card-title1">
+                  <a href="angkatbesi_khanaya.html">
+                      <h3>Khanaya Putri Arma Syfa</h3>
+                      <span class="position">Angkat Besi</span>
+                  </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="angkat">
+            <div class="team-member">
+                <figure>
+                    <a href="angkatbesi_sherin.html"><img src="images/atlet/angkatbesi/sherin.jpeg" alt="img" class="img-fluid"></a>
+                </figure>
+              <div class="p-3 card-title1">
+                    <a href="angkatbesi_sherin.html">
+                        <h3>Sherin Alvionita Putri</h3>
+                        <span class="position">Angkat Besi</span>
+                    </a>
+              </div>
+            </div>
+        </div>
+        
+        <!-- tenis meja -->
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="meja">
+            <div class="team-member">
+                <figure>
+                    <a href="tenismeja_ibnu.html"><img src="images/atlet/meja/ibnu.jpg" alt="img" class="img-fluid"></a>
+                </figure>
+              <div class="p-3 card-title1">
+                    <a href="tenismeja_ibnu.html">
+                        <h3>Muhammad Ibnu Tohir</h3>
+                        <span class="position">Tenis Meja</span>
+                    </a>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="meja">
+          <div class="team-member">
+              <figure>
+                  <a href="tenismeja_dhieo.html"><img src="images/atlet/meja/dhieo.jpg" alt="img" class="img-fluid"></a>
+              </figure>
+            <div class="p-3 card-title1">
+                  <a href="tenismeja_dhieo.html">
+                      <h3>Dhieo Andhika Fraza</h3>
+                      <span class="position">Tenis Meja</span>
+                  </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="meja">
+          <div class="team-member">
+              <figure>
+                  <a href="tenismeja_farrel.html"><img src="images/atlet/meja/farrel.jpg" alt="img" class="img-fluid"></a>
+              </figure>
+            <div class="p-3 card-title1">
+                  <a href="tenismeja_farrel.html">
+                      <h3>Sayid Muhammad Farrel Alaydrus</h3>
+                      <span class="position">Tenis Meja</span>
+                  </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="meja">
+            <div class="team-member">
+                <figure>
+                    <a href="tenismeja_niken.html"><img src="images/atlet/meja/niken.jpg" alt="img" class="img-fluid"></a>
+                </figure>
+              <div class="p-3 card-title1">
+                    <a href="tenismeja_niken.html">
+                        <h3>Niken Wafiyah Putri</h3>
+                        <span class="position">Tenis Meja</span>
+                    </a>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="meja">
+            <div class="team-member">
+                <figure>
+                    <a href="tenismeja_putri.html"><img src="images/atlet/meja/putri.jpg" alt="img" class="img-fluid"></a>
+                </figure>
+              <div class="p-3 card-title1">
+                    <a href="tenismeja_putri.html">
+                        <h3>Putri Aprilia</h3>
+                        <span class="position">Tenis Meja</span>
+                    </a>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="meja">
+          <div class="team-member">
+              <figure>
+                  <a href="tenismeja_serly.html"><img src="images/atlet/meja/serly.jpg" alt="img" class="img-fluid"></a>
+              </figure>
+            <div class="p-3 card-title1">
+                  <a href="tenismeja_serly.html">
+                      <h3>Serly Jamlianti</h3>
+                      <span class="position">Tenis Meja</span>
+                  </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="meja">
+          <div class="team-member">
+              <figure>
+                  <a href="tenismeja_ayyatul.html"><img src="images/atlet/meja/ayyatul.jpg" alt="img" class="img-fluid"></a>
+              </figure>
+            <div class="p-3 card-title1">
+                  <a href="tenismeja_ayyatul.html">
+                      <h3>Ayyatul Husna</h3>
+                      <span class="position">Tenis Meja</span>
+                  </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="meja">
+            <div class="team-member">
+                <figure>
+                    <a href="tenismeja_fadhil.html"><img src="images/atlet/meja/fadhil2.png" alt="img" class="img-fluid"></a>
+                </figure>
+              <div class="p-3 card-title1">
+                    <a href="tenismeja_fadhil.html">
+                        <h3>Muhammad Fadhil Suju</h3>
+                        <span class="position">Tenis Meja</span>
+                    </a>
+              </div>
+            </div>
+        </div>
+        
+        <!-- tenis lapangan -->
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="lapangan">
+            <div class="team-member">
+                <figure>
+                    <a href="tenislapangan_zidane.html"><img src="images/atlet/lapangan/zidane.jpg" alt="img" class="img-fluid"></a>
+                </figure>
+              <div class="p-3 card-title1">
+                    <a href="tenislapangan_zidane.html">
+                        <h3>Zidane Alfareziq</h3>
+                        <span class="position">Tenis Lapangan</span>
+                    </a>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="lapangan">
+          <div class="team-member">
+              <figure>
+                  <a href="tenislapangan_farrel.html"><img src="images/atlet/lapangan/farrel.jpg" alt="img" class="img-fluid"></a>
+              </figure>
+            <div class="p-3 card-title1">
+                  <a href="tenislapangan_farrel.html">
+                      <h3>Farrel Zacky Ramadhan</h3>
+                      <span class="position">Tenis Lapangan</span>
+                  </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="lapangan">
+          <div class="team-member">
+              <figure>
+                  <a href="tenislapangan_aldhiya.html"><img src="images/atlet/lapangan/aldhiya.jpg" alt="img" class="img-fluid"></a>
+              </figure>
+            <div class="p-3 card-title1">
+                  <a href="tenislapangan_aldhiya.html">
+                      <h3>Muhammad Aldhiya</h3>
+                      <span class="position">Tenis Lapangan</span>
+                  </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="lapangan">
+            <div class="team-member">
+                <figure>
+                    <a href="tenislapangan_raihan.html"><img src="images/atlet/lapangan/raihan.jpg" alt="img" class="img-fluid"></a>
+                </figure>
+              <div class="p-3 card-title1">
+                    <a href="tenislapangan_raihan.html">
+                        <h3>Raihan Naufal Yaafi</h3>
+                        <span class="position">Tenis Lapangan</span>
+                    </a>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="lapangan">
+            <div class="team-member">
+                <figure>
+                    <a href="tenislapangan_alraffi.html"><img src="images/atlet/lapangan/alraffi.jpg" alt="img" class="img-fluid"></a>
+                </figure>
+              <div class="p-3 card-title1">
+                    <a href="tenislapangan_alraffi.html">
+                        <h3>Al Raffi Pratama</h3>
+                        <span class="position">Tenis Lapangan</span>
+                    </a>
+              </div>
+            </div>
+        </div>
+  
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="lapangan">
+            <div class="team-member">
+                <figure>
+                    <a href="tenislapangan_fitri.html"><img src="images/atlet/lapangan/fitri.jpg" alt="img" class="img-fluid"></a>
+                </figure>
+              <div class="p-3 card-title1">
+                    <a href="tenislapangan_fitri.html">
+                        <h3>Fitri Rohidah</h3>
+                        <span class="position">Tenis Lapangan</span>
+                    </a>
+              </div>
+            </div>
+        </div>
+  
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="lapangan">
+              <div class="team-member">
+                  <figure>
+                    <a href="tenislapangan_eklesia.html"><img src="images/atlet/lapangan/eklesia.jpeg" alt="img" class="img-fluid"></a>
+                  </figure>
+                <div class="p-3 card-title1">
+                      <a href="tenislapangan_eklesia.html">
+                          <h3>Eklesia Kristi Zulkarnain</h3>
+                          <span class="position">Tenis Lapangan</span>
+                      </a>
+                </div>
+              </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="lapangan">
+            <div class="team-member">
+                <figure>
+                    <a href="tenislapangan_inassa.html"><img src="images/atlet/lapangan/inassa.jpg" alt="img" class="img-fluid"></a>
+                </figure>
+              <div class="p-3 card-title1">
+                    <a href="tenislapangan_inassa.html">
+                        <h3>Inassa Maulida</h3>
+                        <span class="position">Tenis Lapangan</span>
+                    </a>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="lapangan">
+            <div class="team-member">
+                <figure>
+                    <a href="tenislapangan_jerry.html"><img src="images/atlet/lapangan/jerry.jpg" alt="img" class="img-fluid"></a>
+                </figure>
+              <div class="p-3 card-title1">
+                    <a href="tenislapangan_jerry.html">
+                        <h3>Muhammad Jerry Pratama Hafid</h3>
+                        <span class="position">Tenis Lapangan</span>
+                    </a>
+              </div>
+            </div>
+        </div>
+  
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="lapangan">
+            <div class="team-member">
+                <figure>
+                    <a href="tenislapangan_aqilah.html"><img src="images/atlet/lapangan/aqilah.jpg" alt="img" class="img-fluid"></a>
+                </figure>
+              <div class="p-3 card-title1">
+                    <a href="tenislapangan_aqilah.html">
+                        <h3>Aqilah Zahra Nadifa</h3>
+                        <span class="position">Tenis Lapangan</span>
+                    </a>
+              </div>
+            </div>
+        </div>
+        
+        <!-- atletik -->
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="atletik">
+            <div class="team-member">
+                <figure>
+                    <a href="atletik_ananda.html"><img src="images/atlet/atletik/ananda.jpg" alt="img" class="img-fluid"></a>
+                </figure>
+              <div class="p-3 card-title1">
+                    <a href="atletik_ananda.html">
+                        <h3>Ananda Saputra</h3>
+                        <span class="position">Atletik</span>
+                    </a>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="atletik">
+          <div class="team-member">
+              <figure>
+                <a href="atletik_jasmine.html"><img src="images/atlet/atletik/jasmine.jpg" alt="img" class="img-fluid"></a>
+              </figure>
+            <div class="p-3 card-title1">
+                  <a href="atletik_jasmine.html">
+                      <h3>Jasmine Hasan</h3>
+                      <span class="position">Atletik</span>
+                  </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="atletik">
+          <div class="team-member">
+              <figure>
+                <a href="atletik_farel.html"><img src="images/atlet/atletik/farel.png" alt="img" class="img-fluid"></a>
+              </figure>
+            <div class="p-3 card-title1">
+                  <a href="atletik_farel.html">
+                      <h3>Muhammad Farel Habib</h3>
+                      <span class="position">Atletik</span>
+                  </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="atletik">
+            <div class="team-member">
+                <figure>
+                    <a href="atletik_husain.html"><img src="images/atlet/atletik/husain.jpg" alt="img" class="img-fluid"></a>
+                </figure>
+              <div class="p-3 card-title1">
+                    <a href="atletik_husain.html">
+                        <h3>Muhammad Husain</h3>
+                        <span class="position">Atletik</span>
+                    </a>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="atletik">
+            <div class="team-member">
+                <figure>
+                    <a href="atletik_marni.html"><img src="images/atlet/atletik/marni.jpg" alt="img" class="img-fluid"></a>
+                </figure>
+              <div class="p-3 card-title1">
+                    <a href="atletik_marni.html">
+                        <h3>Marni Mey Riska</h3>
+                        <span class="position">Atletik</span>
+                    </a>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="atletik">
+            <div class="team-member">
+                <figure>
+                    <a href="atletik_adhelia.html"><img src="images/atlet/atletik/adhelia.jpg" alt="img" class="img-fluid"></a>
+                </figure>
+              <div class="p-3 card-title1">
+                    <a href="atletik_adhelia.html">
+                        <h3>Adhelia Charisa Putri Sugara</h3>
+                        <span class="position">Atletik</span>
+                    </a>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="atletik">
+          <div class="team-member">
+              <figure>
+                <a href="atletik_arifah.html"><img src="images/atlet/atletik/arifah.jpg" alt="img" class="img-fluid"></a>
+              </figure>
+            <div class="p-3 card-title1">
+                  <a href="atletik_arifah.html">
+                      <h3>Arifah Novita Maharani</h3>
+                      <span class="position">Atletik</span>
+                  </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="atletik">
+          <div class="team-member">
+              <figure>
+                <a href="atletik_hasyid.html"><img src="images/atlet/atletik/hasyid.jpeg" alt="img" class="img-fluid"></a>
+              </figure>
+            <div class="p-3 card-title1">
+                  <a href="atletik_hasyid.html">
+                      <h3>Muhammad Hasyid Nur Khalid</h3>
+                      <span class="position">Atletik</span>
+                  </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="atletik">
+            <div class="team-member">
+                <figure>
+                    <a href="atletik_surya.html"><img src="images/atlet/atletik/surya.jpg" alt="img" class="img-fluid"></a>
+                </figure>
+              <div class="p-3 card-title1">
+                    <a href="atletik_surya.html">
+                        <h3>Surya Akmaludin</h3>
+                        <span class="position">Atletik</span>
+                    </a>
+              </div>
+            </div>
+        </div>
+        
+        <!-- renang -->
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="renang">
+            <div class="team-member">
+                <figure>
+                    <a href="renang_dylan.html"><img src="images/atlet/renang/dylan.jpg" alt="img" class="img-fluid"></a>
+                </figure>
+              <div class="p-3 card-title1">
+                    <a href="renang_dylan.html">
+                        <h3>Dylan Alexander Sing</h3>
+                        <span class="position">Renang</span>
+                    </a>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="renang">
+          <div class="team-member">
+              <figure>
+                <a href="renang_achmad.html"><img src="images/foto.jpeg" alt="img" class="img-fluid"></a>
+              </figure>
+            <div class="p-3 card-title1">
+                  <a href="renang_achmad.html">
+                      <h3>Achmad Fathurrahman</h3>
+                      <span class="position">Renang</span>
+                  </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="renang">
+          <div class="team-member">
+              <figure>
+                <a href="renang_jelita.html"><img src="images/atlet/renang/jelita.jpg" alt="img" class="img-fluid"></a>
+              </figure>
+            <div class="p-3 card-title1">
+                  <a href="renang_jelita.html">
+                      <h3>Jelita Anjani Mahendra Santoso</h3>
+                      <span class="position">Renang</span>
+                  </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="renang">
+            <div class="team-member">
+                <figure>
+                    <a href="renang_nadia.html"><img src="images/atlet/renang/nadia.jpg" alt="img" class="img-fluid"></a>
+                </figure>
+              <div class="p-3 card-title1">
+                    <a href="renang_nadia.html">
+                        <h3>Nadia Aliya Rahman</h3>
+                        <span class="position">Renang</span>
+                    </a>
+              </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="renang">
+            <div class="team-member">
+                <figure>
+                    <a href="renang_fakhri.html"><img src="images/atlet/renang/fakhri.jpg" alt="img" class="img-fluid"></a>
+                </figure>
+              <div class="p-3 card-title1">
+                    <a href="renang_fakhri.html">
+                        <h3>Fakhri Azzam Yazid</h3>
+                        <span class="position">Renang</span>
+                    </a>
+              </div>
+            </div>
+        </div>
+  
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="renang">
+              <div class="team-member">
+                  <figure>
+                    <a href="renang_rio.html"><img src="images/atlet/renang/rio.png" alt="img" class="img-fluid"></a>
+                  </figure>
+                <div class="p-3 card-title1">
+                      <a href="renang_rio.html">
+                          <h3>Muhammad Rio Prabowo</h3>
+                          <span class="position">Renang</span>
+                      </a>
+                </div>
+              </div>
+        </div>
+
+        <!-- anggar -->
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="anggar">
+            <div class="team-member">
+                <figure>
+                    <a href="anggar_aisyah.html"><img src="images/atlet/anggar/aisyah.jpg" alt="img" class="img-fluid"></a>
+                </figure>
+              <div class="p-3 card-title1">
+                    <a href="anggar_aisyah.html">
+                        <h3>Aisyah Ramadhani</h3>
+                        <span class="position">Anggar</span>
+                    </a>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="anggar">
+          <div class="team-member">
+              <figure>
+                <a href="anggar_refly.html"><img src="images/atlet/anggar/refly.jpg" alt="img" class="img-fluid"></a>
+              </figure>
+            <div class="p-3 card-title1">
+                  <a href="anggar_refly.html">
+                      <h3>Refly Vidi Zelany</h3>
+                      <span class="position">Anggar</span>
+                  </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="anggar">
+          <div class="team-member">
+              <figure>
+                <a href="anggar_diva.html"><img src="images/atlet/anggar/diva.jpg" alt="img" class="img-fluid"></a>
+              </figure>
+            <div class="p-3 card-title1">
+                  <a href="anggar_diva.html">
+                      <h3>Diva Riski Natasya</h3>
+                      <span class="position">Anggar</span>
+                  </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="anggar">
+            <div class="team-member">
+                <figure>
+                    <a href="anggar_raditya.html"><img src="images/atlet/anggar/raditya.jpg" alt="img" class="img-fluid"></a>
+                </figure>
+              <div class="p-3 card-title1">
+                    <a href="anggar_raditya.html">
+                        <h3>Raditya Chandra Alvarizi</h3>
+                        <span class="position">Anggar</span>
+                    </a>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="anggar">
+            <div class="team-member">
+                <figure>
+                    <a href="anggar_razzan.html"><img src="images/atlet/anggar/razzan.jpeg" alt="img" class="img-fluid"></a>
+                </figure>
+              <div class="p-3 card-title1">
+                    <a href="anggar_razzan.html">
+                        <h3>Razzan Chandra Alvarizi</h3>
+                        <span class="position">Anggar</span>
+                    </a>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="anggar">
+          <div class="team-member">
+              <figure>
+                <a href="anggar_younez.html"><img src="images/foto.jpeg" alt="img" class="img-fluid"></a>
+              </figure>
+            <div class="p-3 card-title1">
+                  <a href="anggar_younez.html">
+                      <h3>Muhammad Younez Alkatiri</h3>
+                      <span class="position">Anggar</span>
+                  </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="anggar">
+          <div class="team-member">
+              <figure>
+                <a href="anggar_diya.html"><img src="images/atlet/anggar/diya.png" alt="img" class="img-fluid"></a>
+              </figure>
+            <div class="p-3 card-title1">
+                  <a href="anggar_diya.html">
+                      <h3>Diya Meizahra Maharani</h3>
+                      <span class="position">Anggar</span>
+                  </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4 athlete-card" data-category="anggar">
+            <div class="team-member">
+                <figure>
+                    <a href="anggar_gyna.html"><img src="images/foto.jpeg" alt="img" class="img-fluid"></a>
+                </figure>
+              <div class="p-3 card-title1">
+                    <a href="anggar_gyna.html">
+                        <h3>Gyna Atiyyah</h3>
+                        <span class="position">Anggar</span>
+                    </a>
+              </div>
+            </div>
+        </div>
+
+      </div>
+    </section>
+    
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer-col first">
+                        <h6>Tentang PPLPD</h6>
+                        <p class="p-small">PPLPD adalah lembaga yang berfokus pada pengembangan dan pembinaan potensi olahraga generasi muda di Indonesia. Kami berkomitmen untuk menciptakan prestasi dan meningkatkan kualitas atlet muda.</p>
+                    </div>
+                    <div class="footer-col second">
+                        <h6>Links</h6>
+                        <ul class="list-unstyled li-space-lg p-small">
+                            <li><a href="index.html">Beranda</a></li>
+                            <li><a href="tentangkami.html">Tentang Kami</a></li>
+                            <li><a href="cabor.html">Cabor Binaan</a></li>
+                            <li><a href="venue.html">Venue</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col third">
+                        <h6>Kontak Kami</h6>
+                        <p class="p-small">Untuk pertanyaan atau informasi lebih lanjut, silakan kirim email ke <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nazyaramadhani07@gmail.com" target="_blank"><strong>nazyaramadhani07@gmail.com</strong></a></p>
+                        <span class="fa-stack">
+                            <a href="#" target="_blank">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-facebook-f fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="https://www.instagram.com/pplpd.samarinda" target="_blank">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-instagram fa-stack-1x"></i>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end of footer -->
+
+    <!-- Copyright -->
+    <div class="copyright">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-10 text-center">
+                    <p class="p-small" style="color: #6c757d;">© 2024 | Designed by <strong>Nazya Ramadhani, Achmad Nabawi, Rayhannika Ananda Aulia</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end of copyright -->
+
+    <!-- Back To Top Button -->
+    <button onclick="topFunction()" id="myBtn">
+        <img src="images/up-arrow.png" alt="alternative">
+    </button>
+    <!-- end of back to top button -->
+    	
+    <!-- Scripts -->
+    <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+    <script src="js/swiper.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script> <!-- Isotope for filter -->
+    <script src="js/scripts.js"></script> <!-- Custom scripts -->
+    <!-- <script src="js/main.js"></script> -->    
+    
+    <script>
+      function filterAthletes() {
+          const selectedCategory = document.getElementById("categoryFilter").value;
+          const athleteCards = document.querySelectorAll(".athlete-card");
+
+          athleteCards.forEach(card => {
+              const category = card.getAttribute("data-category");
+              
+              // Tampilkan semua kartu jika kategori "all" dipilih
+              if (selectedCategory === "all" || selectedCategory === category) {
+                  card.style.display = "block";
+              } else {
+                  card.style.display = "none";
+              }
+          });
+      }
+  </script>
+</body>
+</html>
