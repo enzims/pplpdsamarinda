@@ -16,8 +16,12 @@ html {
 	height: 100%;
 }
 
+body {
+	background-color: #FDDBBB;
+}
+
 body, p {
-	color: #53575a; 
+	color: #525050; 
 	font: 400 1rem/1.625rem "Open Sans", sans-serif;
 }
 
@@ -461,6 +465,8 @@ a:hover {
 .cards {
     margin-top: 1rem;   /* Jarak atas antar kartu */
     margin-bottom: 1rem; /* Jarak bawah antar kartu */
+	background: #ffffff;
+	border-radius: 7px;
 }
 
 .cards-1 {
@@ -1043,7 +1049,7 @@ a:hover {
 	font-style: normal; }
   
   .team-member .position {
-	color: #cccccc;
+	color: #525050;
 	text-transform: uppercase;
 	font-size: .8rem;
 	letter-spacing: .05rem; 
@@ -1113,7 +1119,6 @@ a:hover {
 	/* prestasi */
 	.prestasi-section {
 		padding: 20px;
-		background-color: #ffffff;
 		border-radius: 10px;
 		max-width: 900px;
 		margin: 0 auto;
@@ -1134,7 +1139,7 @@ a:hover {
 		/* transition: transform 0.2s ease;
 		margin: 30px auto; */
 
-		padding: 15px;
+		padding: 20px;
 		background-color: #ffffff;
 		border-radius: 8px;
 		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -1182,7 +1187,6 @@ a:hover {
 	}
 
 	#venue {
-		background-color: #f8f9fa;
 		padding: 30px 0;
 	}
 	
@@ -1225,10 +1229,3 @@ a:hover {
 		  .btn.btn-primary.btn-black--hover:hover {
 			background: #666666;
 			color: #fff; }
-
-	/* .team-photo {
-	width: 300px;
-	height: 300px;
-	object-fit: cover;
-	display: block;
-	margin: 0 auto;	} */
