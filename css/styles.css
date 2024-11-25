@@ -1229,3 +1229,59 @@ a:hover {
 		  .btn.btn-primary.btn-black--hover:hover {
 			background: #666666;
 			color: #fff; }
+
+
+/* foto walikota dll */
+.header-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Jarak antar gambar */
+    position: absolute;
+	top: 90px;
+    /* bottom: 350px; Menempatkan gambar agak ke bawah, agar tidak menutupi teks */
+    width: 100%;
+}
+
+.image-left, .image-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* gap: 20px; Jarak antar gambar */
+}
+
+.image-left img, .image-right img {
+    width: 115px; /* Ukuran gambar, sesuaikan jika perlu */
+    height: auto;
+    /* border: 2px solid #fff; */
+    /* box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); */
+}
+
+.image-left {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+	padding-left: 20px;
+}
+
+.image-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+	padding-right: 20px;
+}
+
+@media (max-width: 768px) {
+	/* foto walikota dll */
+	.image-left img, .image-right img {
+        max-width: 80px; /* Lebar gambar lebih kecil di layar kecil */
+    }
+
+    .header-images {
+        /* flex-direction: column; Ubah gambar menjadi vertikal */
+        align-items: center;
+        gap: 15px;
+		top: 70px;
+		/* bottom: 10px; */
+    }
+}
